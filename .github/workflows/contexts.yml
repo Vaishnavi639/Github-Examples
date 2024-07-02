@@ -1,0 +1,15 @@
+name: Context-workflows
+
+on: ['push']
+
+jobs:
+  my-context:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: "My Step"
+        run: |
+          echo: "Actions $MY_ACTION"
+          echo: "Actor $MY_ACTOR"
+        env:
+          MY_ACTIONS: ${{ github.action }}
+          MY_ACTOR: ${{ github.actor}}
