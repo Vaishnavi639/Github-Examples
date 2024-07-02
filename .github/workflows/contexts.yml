@@ -8,8 +8,8 @@ jobs:
     steps: 
       - name: "My Step"
         run: |
-          echo: "Actions $MY_ACTION"
-          echo: "Actor $MY_ACTOR"
+          echo "Actions $MY_ACTION"
+          echo "Actor $MY_ACTOR"
         env:
           MY_ACTIONS: ${{ github.action }}
-          MY_ACTOR: ${{ github.actor}}
+          MY_ACTOR: ${{ github.actor }}
