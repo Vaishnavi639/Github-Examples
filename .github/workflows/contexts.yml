@@ -10,6 +10,8 @@ jobs:
         run: |
           echo "Actions $MY_ACTION"
           echo "Actor $MY_ACTOR"
+          echo "JOB_STATUS $MY_JOB_STATUS"
         env:
           MY_ACTIONS: ${{ github.action }}
           MY_ACTOR: ${{ github.actor }}
+          MY_JOB_STATUS: ${{ job.status }}
