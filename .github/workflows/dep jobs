@@ -1,15 +1,19 @@
 name: dependent-jobs-example
-'on':
-  - push
+
+on: ['push']
+
 jobs:
+
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: StepB
+        run: echo "World"
+
   job2:
     runs-on: 'ubuntu:latest'
     needs: job1
     steps:
       - name: StepA
         run: echo "Hello"
-  job1:
-    runs-on: ubuntu-latest
-    steps:
-      - name: StepB
-        run: echo "World"
+ 
