@@ -1,6 +1,6 @@
 name: dependent-jobs-example
 
-on: [push]
+on: ['push']
 
 jobs:
   job2:
